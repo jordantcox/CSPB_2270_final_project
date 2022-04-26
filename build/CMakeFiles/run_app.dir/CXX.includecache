@@ -6,16 +6,12 @@
 
 #IncludeRegexTransform: 
 
-/Users/jordancox/Documents/CSPB 2270/Final_Project/CSPB_2270_final_project/app/main.cpp
-iostream
--
-../code/data_structures.h
-/Users/jordancox/Documents/CSPB 2270/Final_Project/CSPB_2270_final_project/code/data_structures.h
-
 /Users/jordancox/Documents/CSPB 2270/Final_Project/CSPB_2270_final_project/code/data_structures.cpp
 data_structures.h
 /Users/jordancox/Documents/CSPB 2270/Final_Project/CSPB_2270_final_project/code/data_structures.h
 iostream
+-
+math.h
 -
 
 /Users/jordancox/Documents/CSPB 2270/Final_Project/CSPB_2270_final_project/code/data_structures.h
@@ -24,5 +20,7 @@ string
 vector
 -
 iostream
+-
+math.h
 -
 

@@ -1,9 +1,9 @@
 #include <string>
 #include <vector>
 #include <iostream>
+#include <math.h>
 
 using namespace std;
-
 
 struct flight {
     string name;
@@ -41,7 +41,7 @@ public:
     string Extract();
 
     // This subroutine returns the highest priority node without removing it
-    string Peek();
+    string Peek(shared_ptr<bh> heap);
 
     // This subroutine prints the array to make sure it is ordered as expected
     void Print_BH(shared_ptr<bh> heap);

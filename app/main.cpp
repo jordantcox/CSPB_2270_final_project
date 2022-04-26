@@ -24,6 +24,8 @@ int main(){
     test_airport_1.Insert(heap_1, "AAA_GGG", 17.00, 18.00, 500); 
     test_airport_1.Insert(heap_1, "AAA_HHH", 15.00, 16.00, 500); 
 
+    test_airport_1.Print_BH(heap_1);
+
     cout << "Number of flights: " << heap_1->n_flights << endl;
     cout << "Number of chargers: " << test_airport_1.Calculate_Chargers() << endl;
 
@@ -42,6 +44,8 @@ int main(){
     test_airport_2.Insert(heap_2, "AAA_FFF", 9.00, 10.00, 500);  
     test_airport_2.Insert(heap_2, "AAA_GGG", 10.00, 11.00, 500); 
     test_airport_2.Insert(heap_2, "AAA_HHH", 10.00, 11.00, 500); 
+
+    test_airport_2.Print_BH(heap_2);
 
     cout << "Number of flights: " << heap_2->n_flights << endl;
     cout << "Number of chargers: " << test_airport_2.Calculate_Chargers() << endl;
