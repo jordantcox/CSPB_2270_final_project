@@ -38,14 +38,14 @@ public:
     flight Extract(shared_ptr<bh> heap);
 
     // This subroutine returns the highest priority node without removing it
-    string Peek(shared_ptr<bh> heap);
+    flight Peek(shared_ptr<bh> heap);
 
     // This subroutine prints the array to make sure it is ordered as expected
     void Print_BH(shared_ptr<bh> heap);
 
     // This subroutine is performed after all flights are added, 
     // and returns the number of chargers needed at the airport.
-    int Calculate_Chargers();
+    int Calculate_Chargers(shared_ptr<bh> heap);
 
 
 private: 

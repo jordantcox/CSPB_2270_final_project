@@ -95,8 +95,8 @@ flight airport::Extract(shared_ptr<bh> heap){
     return extracted_flight;
 }
 
-string airport::Peek(shared_ptr<bh> heap){
-    return heap->arr[0].name;
+flight airport::Peek(shared_ptr<bh> heap){
+    return heap->arr[0];
 }
 
 void airport::Print_BH(shared_ptr<bh> heap){
@@ -129,8 +129,39 @@ void airport::Print_BH(shared_ptr<bh> heap){
     }
 }
 
-int airport::Calculate_Chargers(){
-    // Implement the airport chargers calculation
-    return 1;
+// In retrospect this should be a recursive function
+int airport::Calculate_Chargers(shared_ptr<bh> heap){
+    int max_chargers = 1;
+
+    for (int i = 0; i<heap->n_flights; i++){
+        int j = i;
+        int n_chargers= 1;
+
+        flight temp_flight;
+        flight temp_flight_2;
+        flight next_flight;
+        temp_flight = Extract(heap);
+        next_flight = Peek(heap);
+        
+        // While flights overlap add additional chargers
+        while (next_flight.arrival_time <= temp_flight.departure_time) {
+            j = j+1;
+            
+            // Breaking in case at the end of the flights
+            if (j > heap->n_flights){
+                break;
+            }
+
+            // Throw away the next flight and look at the following flight
+            temp_flight_2 = Extract(heap);
+            next_flight = Peek(heap);
+            n_chargers = n_chargers+1;   
+        }
+
+        if (n_chargers > max_chargers) {max_chargers = n_chargers;}
+        i = j;
+    }
+
+    return max_chargers;
 }
 
