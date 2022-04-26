@@ -2,42 +2,27 @@
 ## Data Sructure Implemented
 Binary Heap
 
-## Overview and Data Structure Explanation
-A Binary Heap (BH) can be through of as a combination between a priority queue and a binary tree.
-In this implementatio of a BH, we are using artificial flight data. 
+## Short Explanation of Data Structure
+A Binary Heap (BH) can be through of as a combination between a priority queue and a binary tree. The BH has the dual advantages of a priority queue (O(1) to extract data) and a binary tree (O(log2) depth reducing search time when necessary)
 
-This flight data includes an airport, flight, arrival time, departure time, and energy used. 
-In this hypothetical scenario, the airplanes are electrified such that during their residence 
-time on ground they must charge similar to an electric car.
+A proper BH should have the following capabilities
+* Insert: Insert a new node as a leaf of the BH and 'percolate up' the leaf until it is in the proper location.
+* Peek: Show the top priority node wihtout modifying the tree
+* Printing: Output the BH contents to the screen
+* Extracting: Pulling the top node from the tree and fixing the tree so it's queue and tree properties are maintaned. 
 
-The BH will be used to predict the number of aiport chargers needed at a site by prioritizing 
-the airplanes by arrival time, departure time, and if there are an insufficient number 
-of chargers the code will add chargers and re-run the model to make sure all planes can depart 
-on time.
+In this program, the BH is implemented as an array. The major difference between the BH and the priority queue previously implemented is in the extraction method. For an extract a BH replaces the top node with the bottom-most leaf and then percolates the leaf down until the tree properties are restored.
 
-Initially the plan for this project was bigger but to focus on the data structure
-it was downscaled to emphasize the BH data structure.
+## Compliation Instructions 
+To build this project clone the project into a repository, then navigate to the build folder. Type the following commands:
+* 'cmake ..'
+* 'make'
+* './run_app'
 
-## Objectives
-* Create an airport class.
-* Fill airport class with flight information, four algorithms are needed for this
-  * Insert
-  * Swap
-  * Extract
-  * Peek
-* Estimate the number of chargers needed at the airport
+This was similar to how our homeworks were compiled. 
 
-## Algorithm Routine
-* Step 1. Import a number of flights to the airport and into the binary heap
-* Step 2. Estimate a number of EV chargers needed
-* Step 3. Extract the highest priority airplane from the heap and reorder heap
-* Step 4. Estimate the charge completion time of the aircraft
-* Step 5. While airplane is charging number of chargers is reduced by 1
-* Step 6. If any airplane is forced to delay departure due to charging, increase
-  * airport chargers by 1 and return to step 1.
+## Project Overview and Motivation
+The motivation for this project was to model airport charging infrastructure in the case of electrified flight. The airplanes are placed into the priority queue based on their departure time. 
 
-
-## Compilation Instructions
-
-
+Any time more than one plane is on the ground, it is assumed that there should be enough chargers to charge all planes. Thus the algorithm extracts flights and increments chargers for each overlapping flight
 
