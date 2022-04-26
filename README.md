@@ -15,10 +15,26 @@ the airplanes by arrival time, departure time, and if there are an insufficient 
 of chargers the code will add chargers and re-run the model to make sure all planes can depart 
 on time.
 
-
+Initially the plan for this project was bigger but to focus on the data structure
+it was downscaled to emphasize the BH data structure.
 
 ## Objectives
-* Lorem Ipsum
+* Create an airport class.
+* Fill airport class with flight information, four algorithms are needed for this
+  * Insert
+  * Swap
+  * Extract
+  * Peek
+* Estimate the number of chargers needed at the airport
+
+## Algorithm Routine
+* Step 1. Import a number of flights to the airport and into the binary heap
+* Step 2. Estimate a number of EV chargers needed
+* Step 3. Extract the highest priority airplane from the heap and reorder heap
+* Step 4. Estimate the charge completion time of the aircraft
+* Step 5. While airplane is charging number of chargers is reduced by 1
+* Step 6. If any airplane is forced to delay departure due to charging, increase
+  * airport chargers by 1 and return to step 1.
 
 
 ## Compilation Instructions
