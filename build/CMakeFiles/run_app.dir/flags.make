@@ -6,7 +6,7 @@ CXX_DEFINES =
 
 CXX_INCLUDES = 
 
-CXX_FLAGSx86_64 =  -std=c++11 -Wall -std=c++11 -Wall -g -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk
+CXX_FLAGSx86_64 =  -std=c++11 -Wall -std=c++11 -Wall -std=c++11 -Wall -std=c++11 -Wall -g -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk
 
-CXX_FLAGS =  -std=c++11 -Wall -std=c++11 -Wall -g -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk
+CXX_FLAGS =  -std=c++11 -Wall -std=c++11 -Wall -std=c++11 -Wall -std=c++11 -Wall -g -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk
 
