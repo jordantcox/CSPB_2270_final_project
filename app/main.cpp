@@ -26,6 +26,11 @@ int main(){
 
     test_airport_1.Print_BH(heap_1);
 
+    cout << "Extracting a flight" << endl;
+    flight temp_flight = test_airport_1.Extract(heap_1);
+
+    test_airport_1.Print_BH(heap_1);
+
     cout << "Number of flights: " << heap_1->n_flights << endl;
     cout << "Number of chargers: " << test_airport_1.Calculate_Chargers() << endl;
 

@@ -32,13 +32,10 @@ public:
     // This subroutine inserts a flight into the binary tree
     void Insert(shared_ptr<bh> heap, string flight_name, float arrival_time, float departure_time, float energy_needed);
 
-    // This subroutine swaps two nodes wihtin the binary heap to maintain heap order
-    void Swap();
-
     // This subroutine extracts the highest priority node and then replaces it 
     // with the lowest priority node, then swaps all necessary nodes to maintain
     // the binary tree structure
-    string Extract();
+    flight Extract(shared_ptr<bh> heap);
 
     // This subroutine returns the highest priority node without removing it
     string Peek(shared_ptr<bh> heap);
